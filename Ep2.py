@@ -42,8 +42,8 @@ def extrai_valor(carta):
         return "Q"
     elif "K" in carta:
         return "K"
-
-    # Movimentos possíveis para as cartas:
+ 
+# Movimentos possíveis para as cartas:
     
 def lista_movimentos_possiveis(baralho,posicao):
     movimentos_gerais = [0]*len(baralho)
