@@ -48,22 +48,26 @@ def extrai_valor(carta):
 def lista_movimentos_possiveis(baralho,posicao):
     movimentos_gerais = [0]*len(baralho)
     #Caso o índice seja = 0
-    if posicao == 0:
-        return []
+    movimentos_gerais[0] = []
     #Outros índices:
-    i = 0
+    i = 1
     while i < len(baralho):
-        #Caso a carta possa realizar qualquer movimento: 
-        if ((baralho[i-1][0] == baralho[i][0]) and (baralho[i-3][0] == baralho[i][0])) or ((baralho[i-1][1] == baralho[i][1]) and (baralho[i-3][1] == baralho[i][1])):
-            movimentos_gerais[i] = [1,3]
-        #Caso a carta possa  ser apenas empilhada:
-        elif (baralho[i-1][0] == baralho[i][0]) or (baralho[i-1][1] == baralho[i][1]):
+        #Para posições < 3:
+        if i < 3:
             movimentos_gerais[i] = [1]
-        #Caso a carta possa ser emplihada apenas sobre o terceiro vizinho anterior:
-        elif (baralho[i-3][0] == baralho[i][0]) or (baralho[i-3][1] == baralho[i][1]):
-            movimentos_gerais[i] = [3]
-        #Caso a carta não tenha movimentos possíveis:
-        else:
-            movimentos_gerais[i] = []
+        #Para posições > 3:
+        if i > 3:    
+            #Caso a carta possa realizar qualquer movimento: 
+            if ((baralho[i-1][0] == baralho[i][0]) and (baralho[i-3][0] == baralho[i][0])) or ((baralho[i-1][1] == baralho[i][1]) and (baralho[i-3][1] == baralho[i][1])):
+                movimentos_gerais[i] = [1,3]
+            #Caso a carta possa  ser apenas empilhada:
+            elif (baralho[i-1][0] == baralho[i][0]) or (baralho[i-1][1] == baralho[i][1]):
+                movimentos_gerais[i] = [1]
+            #Caso a carta possa ser emplihada apenas sobre o terceiro vizinho anterior:
+            elif (baralho[i-3][0] == baralho[i][0]) or (baralho[i-3][1] == baralho[i][1]):
+                movimentos_gerais[i] = [3]
+            #Caso a carta não tenha movimentos possíveis:
+            else:
+                movimentos_gerais[i] = []
         i += 1
-    return (movimentos_gerais[posicao])
+    return (movimentos_gerais[posicao],movimentos_gerais)
