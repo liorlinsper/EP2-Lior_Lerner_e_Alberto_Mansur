@@ -56,7 +56,7 @@ def lista_movimentos_possiveis(baralho,posicao):
         if i < 3:
             movimentos_gerais[i] = [1]
         #Para posições > 3:
-        if i > 3:    
+        if i >= 3:    
             #Caso a carta possa realizar qualquer movimento: 
             if ((baralho[i-1][0] == baralho[i][0]) and (baralho[i-3][0] == baralho[i][0])) or ((baralho[i-1][1] == baralho[i][1]) and (baralho[i-3][1] == baralho[i][1])):
                 movimentos_gerais[i] = [1,3]
