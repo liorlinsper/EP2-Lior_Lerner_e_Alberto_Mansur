@@ -54,6 +54,7 @@ def lista_movimentos_possiveis(baralho,posicao):
     while i < len(baralho):
         #Para posições < 3:
         if i < 3:
+            if (baralho[i-1][0] == baralho[i][0]) or (baralho[i-1][1] == baralho[i][1]):
             movimentos_gerais[i] = [1]
         #Para posições > 3:
         if i >= 3:    
