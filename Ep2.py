@@ -52,7 +52,7 @@ def extrai_valor(carta):
         return []
     #Outros índices:
     i = 1
-    while i> 0:
+    while i < len(baralho):
         #Caso a carta possa realizar qualquer movimento: 
         if (baralho[i-1] == baralho[i]) and (baralho[i-3] == baralho[i]):
             movimentos_gerais[i] = [1,3]
