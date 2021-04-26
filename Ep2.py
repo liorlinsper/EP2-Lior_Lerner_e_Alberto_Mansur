@@ -42,3 +42,29 @@ def extrai_valor(carta):
         return "Q"
     elif "K" in carta:
         return "K"
+
+    # Movimentos possíveis para as cartas:
+    
+    def lista_movimentos_possiveis(baralho,posicao):
+    movimentos_gerais = [0]*len(baralho)
+    #Caso o índice seja = 0
+    if posicao == 0:
+        return []
+    #Outros índices:
+    i = 1
+    while i> 0:
+        #Caso a carta possa realizar qualquer movimento: 
+        if (baralho[i-1] == baralho[i]) and (baralho[i-3] == baralho[i]):
+            movimentos_gerais[i] = [1,3]
+        #Caso a carta possa  ser apenas empilhada:
+        elif baralho[i-1] == baralho[i]:
+            movimentos_gerais[i] = [1]
+        #Caso a carta possa ser emplihada apenas sobre o terceiro vizinho anterior:
+        elif baralho[i-3] == baralho[i]:
+            movimentos_gerais[i] = [3]
+        #Nenhum movimento possível para a carta:
+        else:
+            movimentos_gerais[i] = []
+        i += 1
+    
+    return (movimentos_gerais[posicao])
