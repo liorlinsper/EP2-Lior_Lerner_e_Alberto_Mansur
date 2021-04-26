@@ -45,7 +45,7 @@ def extrai_valor(carta):
 
     # Movimentos possíveis para as cartas:
     
-    def lista_movimentos_possiveis(baralho,posicao):
+def lista_movimentos_possiveis(baralho,posicao):
     movimentos_gerais = [0]*len(baralho)
     #Caso o índice seja = 0
     if posicao == 0:
@@ -53,14 +53,28 @@ def extrai_valor(carta):
     #Outros índices:
     i = 0
     while i < len(baralho):
+        #NAIPE:
+
         #Caso a carta possa realizar qualquer movimento: 
-        if (baralho[i-1] == baralho[i]) and (baralho[i-3] == baralho[i]):
+        if (baralho[i-1][0] == baralho[i][0]) and (baralho[i-3][0] == baralho[i][0]):
             movimentos_gerais[i] = [1,3]
         #Caso a carta possa  ser apenas empilhada:
-        elif baralho[i-1] == baralho[i]:
+        elif baralho[i-1][0] == baralho[i][0]:
             movimentos_gerais[i] = [1]
         #Caso a carta possa ser emplihada apenas sobre o terceiro vizinho anterior:
-        elif baralho[i-3] == baralho[i]:
+        elif baralho[i-3][0] == baralho[i][0]:
+            movimentos_gerais[i] = [3]
+        
+        #LETRA:
+
+         #Caso a carta possa realizar qualquer movimento: 
+        if (baralho[i-1][1] == baralho[i][1]) and (baralho[i-3][1] == baralho[i][1]):
+            movimentos_gerais[i] = [1,3]
+        #Caso a carta possa  ser apenas empilhada:
+        elif baralho[i-1][1] == baralho[i][1]:
+            movimentos_gerais[i] = [1]
+        #Caso a carta possa ser emplihada apenas sobre o terceiro vizinho anterior:
+        elif baralho[i-3][1] == baralho[i][1]:
             movimentos_gerais[i] = [3]
         #Nenhum movimento possível para a carta:
         else:
