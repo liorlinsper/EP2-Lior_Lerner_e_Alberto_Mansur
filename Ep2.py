@@ -51,7 +51,7 @@ def extrai_valor(carta):
     if posicao == 0:
         return []
     #Outros índices:
-    i = 1
+    i = 0
     while i < len(baralho):
         #Caso a carta possa realizar qualquer movimento: 
         if (baralho[i-1] == baralho[i]) and (baralho[i-3] == baralho[i]):
