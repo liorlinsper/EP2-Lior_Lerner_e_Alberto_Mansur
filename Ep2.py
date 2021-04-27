@@ -77,3 +77,37 @@ def lista_movimentos_possiveis(baralho,posicao):
         i += 1
     return (movimentos_gerais[posicao])
 
+
+
+# Relata se ainda há movimentos possíveis (True/False):
+def possui_movimentos_possiveis(baralho):
+    i = 1 
+    movimentos_possiveis = 0
+    while i < len(baralho):
+        #Para posições < 3:
+        if i < 3:
+            if (baralho[i-1][0] == baralho[i][0]) or (baralho[i-1][1] == baralho[i][-1]):
+                movimentos_possiveis += 1
+            else:
+                movimentos_possiveis += 0
+        #Para posições >= 3:
+        if i >=3:    
+            #Caso a carta possa realizar qualquer movimento: 
+            if  ((baralho[i-1][0] == baralho[i][0]) and (baralho[i-3][0] == baralho[i][0])) or ((baralho[i-1][-1] == baralho[i][-1]) and (baralho[i-3][-1] == baralho[i][-1])) or ((baralho[i-1][0] == baralho[i][0]) and (baralho[i-3][-1] == baralho[i][-1])) or ((baralho[i-1][-1] == baralho[i][-1]) and (baralho[i-3][0] == baralho[i][0])):
+                movimentos_possiveis += 1
+            #Caso a carta possa  ser apenas empilhada:
+            elif (baralho[i-1][0] == baralho[i][0]) or (baralho[i-1][-1] == baralho[i][-1]):
+                movimentos_possiveis += 1
+            #Caso a carta possa ser emplihada apenas sobre o terceiro vizinho anterior:
+            elif (baralho[i-3][0] == baralho[i][0]) or (baralho[i-3][-1] == baralho[i][-1]):
+                movimentos_possiveis += 1
+            #Caso a carta não tenha movimentos possíveis:
+            else:
+                movimentos_possiveis += 0
+        i += 1
+    if movimentos_possiveis >= 1:
+        return True
+    else: 
+        return False
+
+
