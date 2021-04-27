@@ -78,7 +78,7 @@ def lista_movimentos_possiveis(baralho,posicao):
     return (movimentos_gerais[posicao])
 
 
-e
+
 def empilha(baralho,origem,destino):
     if origem - 3 == destino:
         baralho[destino] = baralho[origem]
