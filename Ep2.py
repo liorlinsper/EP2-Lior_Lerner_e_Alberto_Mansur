@@ -79,6 +79,20 @@ def lista_movimentos_possiveis(baralho,posicao):
 
 
 
+def empilha(baralho,origem,destino):
+    if origem <=1:
+        baralho.insert(destino,baralho[origem])
+        baralho.remove(baralho[origem])
+        baralho.remove(baralho[destino])
+        origem+=1
+    elif origem > 1:
+        baralho.insert(destino,baralho[origem])
+        baralho.remove(baralho[origem+1])
+        baralho.remove(baralho[destino])
+        origem+=1
+    return baralho
+
+
 # Relata se ainda há movimentos possíveis (True/False):
 def possui_movimentos_possiveis(baralho):
     i = 1 
