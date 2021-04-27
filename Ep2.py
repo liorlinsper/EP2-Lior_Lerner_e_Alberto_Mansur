@@ -80,16 +80,12 @@ def lista_movimentos_possiveis(baralho,posicao):
 
 
 def empilha(baralho,origem,destino):
-    if origem <=1:
-        baralho.insert(destino,baralho[origem])
-        baralho.remove(baralho[origem])
-        baralho.remove(baralho[destino])
-        origem+=1
-    elif origem > 1:
-        baralho.insert(destino,baralho[origem])
-        baralho.remove(baralho[origem+1])
-        baralho.remove(baralho[destino])
-        origem+=1
+    if origem - 3 == destino:
+        baralho[destino] = baralho[origem]
+        del(baralho[origem])
+    elif origem -1 == destino:
+        baralho[destino] = baralho[origem]
+        del(baralho[origem])
     return baralho
 
 
