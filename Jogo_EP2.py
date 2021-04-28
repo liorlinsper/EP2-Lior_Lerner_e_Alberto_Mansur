@@ -10,18 +10,12 @@ while i < len(baralho):
     i+=1
 
 #JOGO:
+#JOGO:
 
-i = 0
-while i < len(baralho):
-    print("{0}. {1}".format(i+1,baralho[i]))
-    i+=1
 
 pode_jogar = Funcoes_EP2.possui_movimentos_possiveis(baralho)
 while pode_jogar == True:
     i = 0
-    while i < len(baralho):
-        print("{0}. {1}".format(i+1,baralho[i]))
-        i+=1
     esc_carta = int(input("Escolha uma carta( digite um numero entre 1 e 52):"))
     movimentos_possiveis = Funcoes_EP2.lista_movimentos_possiveis(baralho,esc_carta-1)
     if esc_carta < 0 or esc_carta > 52:
@@ -32,12 +26,24 @@ while pode_jogar == True:
         opcao  = int(input("Qual opção(1 ou 3): "))
         if opcao == 1:
             baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-2)
+            while i < len(baralho):
+                print("{0}. {1}".format(i+1,baralho[i]))
+                i+=1
         elif opcao == 3:
             baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-4)
+            while i < len(baralho):
+                print("{0}. {1}".format(i+1,baralho[i]))
+                i+=1
     elif movimentos_possiveis == [1]:
         baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-2)
+        while i < len(baralho):
+                print("{0}. {1}".format(i+1,baralho[i]))
+                i+=1
     elif movimentos_possiveis == [3]:
         baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-4)
+        while i < len(baralho):
+                print("{0}. {1}".format(i+1,baralho[i]))
+                i+=1
 # FIM DO JOGO:
 while pode_jogar == False:
     if len(baralho) == 1:
