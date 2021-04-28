@@ -32,12 +32,10 @@ while pode_jogar == True:
     elif movimentos_possiveis == [1,3]:
         opcao  = int(input("Qual opção(1 ou 3): "))
         if opcao == 1:
-            baralho1 = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-2)
+            baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-2)
         elif opcao == 3:
-            baralho1 = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-4)
+            baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-4)
     elif movimentos_possiveis == [1]:
-        baralho1 = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-2)
+        baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-2)
     elif movimentos_possiveis == [3]:
-        baralho1 = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-4)
-
-    print(baralho1)
+        baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-4)
