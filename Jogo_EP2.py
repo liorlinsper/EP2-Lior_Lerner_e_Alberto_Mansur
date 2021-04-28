@@ -33,7 +33,7 @@ while pode_jogar == True:
     i = 0
     esc_carta = int(input("Escolha uma carta( digite um numero entre 1 e 52):"))
     movimentos_possiveis = Funcoes_EP2.lista_movimentos_possiveis(baralho,esc_carta-1)
-    if esc_carta < 0 or esc_carta > 52:
+    if esc_carta < 0 or esc_carta > len(baralho):
         print("Movimento Inválido")
     elif movimentos_possiveis == []:
         print("Não há movimentos possíveis")
