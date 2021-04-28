@@ -38,3 +38,25 @@ while pode_jogar == True:
         baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-2)
     elif movimentos_possiveis == [3]:
         baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-4)
+# FIM DO JOGO:
+while pode_jogar == False:
+    if len(baralho) == 1:
+        print("Parabéns! Você venceu!")
+        jogar_novamente = str(input("Você quer jogar novamente? (digite sim ou não)"))
+        if jogar_novamente == "sim":
+            pode_jogar == True
+        elif jogar_novamente == 'não':
+            pode_jogar == False
+        elif jogar_novamente != 'não' or jogar_novamente != 'sim':
+            print("Esta não é uma opção válida")
+            jogar_novamente = str(input("Você quer jogar novamente? (digite sim ou não)"))
+    elif len(baralho) > 1:
+        print("Você perdeu!")
+        jogar_novamente = str(input("Você quer jogar novamente? (digite sim ou não)"))
+        if jogar_novamente == "sim":
+            pode_jogar == True
+        elif jogar_novamente == 'não':
+            pode_jogar == False
+        elif jogar_novamente != 'não' or jogar_novamente != 'sim':
+            print("Esta não é uma opção válida")
+            jogar_novamente = str(input("Você quer jogar novamente? (digite sim ou não)"))
