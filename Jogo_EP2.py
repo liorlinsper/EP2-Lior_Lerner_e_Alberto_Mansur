@@ -12,6 +12,8 @@ print("2. Empilhar uma carta do mesmo naípe sobre a terceira carta anterior. ")
 print("3. Empilhar uma carta do mesmo número sobre a carta imediatamente anterior.")
 print("4. Empilhar uma carta do mesmo número sobre a terceira carta anterior. ")
 print("")
+print("Em nosso jogo, empilhar a carta sobre uma vizinha é representada pelo número 1, e empilhar sobre a terceira carta anterior é representada pelo número 3")
+print("")
 print("Desde que alguma das condições acima seja satisfeita, qualquer carta pode ser movimentada. ")
 print("")
 print("Boa sorte!")
@@ -31,6 +33,7 @@ while i < len(baralho):
 
 pode_jogar = Funcoes_EP2.possui_movimentos_possiveis(baralho)
 while pode_jogar == True:
+    pode_jogar = Funcoes_EP2.possui_movimentos_possiveis(baralho)
     i = 0
     esc_carta = int(input("Escolha uma carta( digite um numero entre 1 e {0}):".format(len(baralho))))
     movimentos_possiveis = Funcoes_EP2.lista_movimentos_possiveis(baralho,esc_carta-1)
