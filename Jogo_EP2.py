@@ -40,7 +40,7 @@ while pode_jogar == True:
     if esc_carta < 0 or esc_carta > len(baralho):
         print("Movimento Inválido")
     elif movimentos_possiveis == []:
-        print("Não há movimentos possíveis")
+        print(("Não há movimentos possíveis para a carta {0}").format(baralho[esc_carta-1]))
     elif movimentos_possiveis == [1,3]:
         opcao  = int(input("Qual opção(1 ou 3): "))
         if opcao == 1:
