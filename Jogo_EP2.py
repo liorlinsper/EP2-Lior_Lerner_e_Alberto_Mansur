@@ -16,7 +16,6 @@ while i < len(baralho):
     print("{0}. {1}".format(i+1,baralho[i]))
     i+=1
 
-baralho1 = baralho
 pode_jogar = Funcoes_EP2.possui_movimentos_possiveis(baralho)
 while pode_jogar == True:
     i = 0
