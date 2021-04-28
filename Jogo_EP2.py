@@ -27,8 +27,6 @@ while i < len(baralho):
     i+=1
 
 #JOGO:
-#JOGO:
-
 
 pode_jogar = Funcoes_EP2.possui_movimentos_possiveis(baralho)
 while pode_jogar == True:
