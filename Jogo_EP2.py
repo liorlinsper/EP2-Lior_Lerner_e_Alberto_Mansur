@@ -52,17 +52,15 @@ while pode_jogar == False:
         if jogar_novamente == "sim":
             pode_jogar == True
         elif jogar_novamente == 'não':
-            pode_jogar == False
+            break
         elif jogar_novamente != 'não' or jogar_novamente != 'sim':
             print("Esta não é uma opção válida")
-            jogar_novamente = str(input("Você quer jogar novamente? (digite sim ou não)"))
     elif len(baralho) > 1:
         print("Você perdeu!")
         jogar_novamente = str(input("Você quer jogar novamente? (digite sim ou não)"))
         if jogar_novamente == "sim":
             pode_jogar == True
         elif jogar_novamente == 'não':
-            pode_jogar == False
+            break
         elif jogar_novamente != 'não' or jogar_novamente != 'sim':
             print("Esta não é uma opção válida")
-            jogar_novamente = str(input("Você quer jogar novamente? (digite sim ou não)"))
