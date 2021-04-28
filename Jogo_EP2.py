@@ -24,7 +24,7 @@ while pode_jogar == True:
         print("{0}. {1}".format(i+1,baralho[i]))
         i+=1
     esc_carta = int(input("Escolha uma carta( digite um numero entre 1 e 52):"))
-    movimentos_possiveis = Funcoes_EP2.lista_movimentos_possiveis(baralho,esc_carta)
+    movimentos_possiveis = Funcoes_EP2.lista_movimentos_possiveis(baralho,esc_carta-1)
     if esc_carta < 0 or esc_carta > 52:
         print("Movimento Inválido")
     elif movimentos_possiveis == []:
