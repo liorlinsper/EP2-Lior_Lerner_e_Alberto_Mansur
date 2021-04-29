@@ -69,7 +69,7 @@ while pode_jogar == False:
         print("Parabéns! Você venceu!")
         jogar_novamente = str(input("Você quer jogar novamente? (digite sim ou não)"))
         if jogar_novamente == "sim":
-            pode_jogar == True
+            pode_jogar = True
         elif jogar_novamente == 'não':
             break
         elif jogar_novamente != 'não' or jogar_novamente != 'sim':
@@ -78,7 +78,7 @@ while pode_jogar == False:
         print("Você perdeu!")
         jogar_novamente = str(input("Você quer jogar novamente? (digite sim ou não)"))
         if jogar_novamente == "sim":
-            pode_jogar == True
+            pode_jogar = True
         elif jogar_novamente == 'não':
             break
         elif jogar_novamente != 'não' or jogar_novamente != 'sim':
