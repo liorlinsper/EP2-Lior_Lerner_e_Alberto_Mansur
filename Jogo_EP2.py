@@ -16,8 +16,8 @@ print("Em nosso jogo, empilhar a carta sobre uma vizinha é representada pelo n�
 print("")
 print("Desde que alguma das condições acima seja satisfeita, qualquer carta pode ser movimentada. ")
 print("")
-print(color.BOLD + "OBSERVAÇÃO: Para uma visualização melhor das cartas, é recomendado o uso do light-mode/fundo do terminal branco, por conta da cor preta presente em certos naipes." + color.END)
-print("")      
+print('\033[1m'+"OBSERVAÇÃO: Para uma visualização melhor das cartas, é recomendado o uso do light-mode/fundo do terminal branco, por conta da cor preta presente em certos naipes." +'\033[0;0m')
+print("")
 print("Boa sorte!")
 
 import Funcoes_EP2
