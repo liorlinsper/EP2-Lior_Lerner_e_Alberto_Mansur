@@ -23,7 +23,8 @@ import random
 # Misturando baralho
 baralho = Funcoes_EP2.cria_baralho()
 random.shuffle(baralho)
-#Colocando o baralho em ordem
+
+#Cor do baralho:
 
 def cor(baralho):
     i = 0
