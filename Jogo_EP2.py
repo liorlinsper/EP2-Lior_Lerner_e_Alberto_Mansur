@@ -24,20 +24,31 @@ import random
 baralho = Funcoes_EP2.cria_baralho()
 random.shuffle(baralho)
 #Colocando o baralho em ordem
-i = 0
-while i < len(baralho):
-    print("{0}. {1}".format(i+1,baralho[i]))
-    i+=1
+
+def cor(baralho):
+    i = 0
+    while i < len(baralho):
+        if "♣" in baralho[i]:
+            print("{0}. \033[30m{1}\033[0;0m ".format(i+1,baralho[i]))
+        if "♠" in baralho[i]:
+            print("{0}. \033[30m{1}\033[0;0m ".format(i+1,baralho[i]))
+        if "♥" in baralho[i]:
+            print("{0}. \033[31m{1}\033[0;0m ".format(i+1,baralho[i]))
+        if "♦" in baralho[i]:
+            print("{0}. \033[31m{1}\033[0;0m ".format(i+1,baralho[i]))
+        i+=1
+    return ""
 
 #JOGO:
 
 pode_jogar = Funcoes_EP2.possui_movimentos_possiveis(baralho)
+print(cor(baralho))
 while pode_jogar == True:
-    pode_jogar = Funcoes_EP2.possui_movimentos_possiveis(baralho)
     i = 0
+    pode_jogar = Funcoes_EP2.possui_movimentos_possiveis(baralho)
     esc_carta = int(input("Escolha uma carta( digite um numero entre 1 e {0}):".format(len(baralho))))
     movimentos_possiveis = Funcoes_EP2.lista_movimentos_possiveis(baralho,esc_carta-1)
-    if esc_carta < 0 or esc_carta > len(baralho):
+    if esc_carta < 0 or esc_carta > 52:
         print("Movimento Inválido")
     elif movimentos_possiveis == []:
         print(("Não há movimentos possíveis para a carta {0}").format(baralho[esc_carta-1]))
@@ -45,24 +56,17 @@ while pode_jogar == True:
         opcao  = int(input("Qual opção(1 ou 3): "))
         if opcao == 1:
             baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-2)
-            while i < len(baralho):
-                print("{0}. {1}".format(i+1,baralho[i]))
-                i+=1
+            print(cor(baralho))
         elif opcao == 3:
             baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-4)
-            while i < len(baralho):
-                print("{0}. {1}".format(i+1,baralho[i]))
-                i+=1
+            print(cor(baralho))
     elif movimentos_possiveis == [1]:
         baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-2)
-        while i < len(baralho):
-                print("{0}. {1}".format(i+1,baralho[i]))
-                i+=1
+        print(cor(baralho))
     elif movimentos_possiveis == [3]:
         baralho = Funcoes_EP2.empilha(baralho,esc_carta-1,esc_carta-4)
-        while i < len(baralho):
-                print("{0}. {1}".format(i+1,baralho[i]))
-                i+=1
+        print(cor(baralho))
+        
 # FIM DO JOGO:
 while pode_jogar == False:
     if len(baralho) == 1:
