@@ -9,7 +9,7 @@ Para que este objetivo seja atingido, são apenas permitidos dois tipos de movim
 1. Empilhar a carta escolhida sobre a carta à sua esquerda.
 2. Empilhar a carta escolhida sobre uma carta localizada três espaços à sua esquerda.
 
-Porém, estes movimentos só podem ser realizados caso as cartas tenham o mesmo naipe, ou o mesmo número.
+Porém, estes movimentos só podem ser realizados caso as cartas tenham o mesmo naipe, ou o mesmo valor (letra/número).
 
 Boa sorte!
 
