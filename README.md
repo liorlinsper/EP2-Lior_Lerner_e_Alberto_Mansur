@@ -11,6 +11,8 @@ Para que este objetivo seja atingido, são apenas permitidos dois tipos de movim
 
 Porém, estes movimentos só podem ser realizados caso as cartas tenham o mesmo naipe, ou o mesmo valor (letra/número).
 
+Observação: Para que seja possível jogar nosso jogo, é necessário que tanto o arquivo "Funcoes_EP2" quanto o "Jogo_EP2" estajam baixados, porque o jogo utiliza as funções do arquivo "Funcoes_EP2" para funcionar.
+
 Boa sorte!
 
 
