@@ -19,7 +19,7 @@ print("")
 print('\033[1m'+"OBSERVAÇÃO: Para uma visualização melhor das cartas, é recomendado o uso do light-mode/fundo do terminal branco, por conta da cor preta presente em certos naipes." +'\033[0;0m')
 print("")
 print("Boa sorte!")
-input("Pressione [Espaço] para começar o jogo")
+input("Pressione [Enter] para começar o jogo")
 
 import Funcoes_EP2
 import random
